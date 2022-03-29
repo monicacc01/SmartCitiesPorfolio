@@ -1,0 +1,36 @@
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+    <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+    <label for="mobile-menu">
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+    </label>
+    <div class="ae-container-fluid rk-topbar">
+      <h1 class="rk-logo"><a [routerLink]="['/porfolio']">Chicago Bulls 1996</a></h1>
+      <nav class="rk-navigation">
+        <ul class="rk-menu">
+          <li class="active rk-menu__item">
+            <a [routerLink]="['/porfolio']" class="rk-menu__link">Jugadores</a>
+          </li>
+          <li class="active rk-menu__item">
+            <a [routerLink]="['/about']" class="rk-menu__link">Equipo técnico</a>
+          </li>
+        </ul>
+        <div class="rk-search">
+          <input type="text" (keyup)="resetBusqueda()"  (keyup.enter)="buscarTexto(textBusq.value)" #textBusq placeholder="Posición" id="urku-search" class="rk-search-field">
+          <label for="urku-search">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+            </svg>
+            
+          </label>
+        </div>
+      </nav>
+    </div>
+  </header>
